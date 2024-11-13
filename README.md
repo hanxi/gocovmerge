@@ -1,13 +1,19 @@
-gocovmerge
-==========
+# gocovmerge
 
 gocovmerge takes the results from multiple `go test -coverprofile` runs and
 merges them into one profile.
 
-usage
------
+## usage
 
-    gocovmerge [coverprofiles...]
+```
+gocovmerge [cover.txt.timestamp.hash...]
+```
+
+eg:
+```
+gocovmerge cover.txt.1723042827.e24dac6 cover.txt.1723042828.e24dac6
+```
+
 
 gocovmerge takes the source coverprofiles as the arguments (output from
 `go test -coverprofile coverage.out`) and outputs a merged version of the
